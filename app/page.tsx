@@ -180,7 +180,7 @@ export default function DevOpsPortfolio() {
             </div>
             <div className="flex items-center gap-2 hover:text-primary transition-colors cursor-pointer">
               <MapPin className="w-4 h-4" />
-              Paris, France
+              Evian-les-Bains, France
             </div>
           </div>
         </div>
