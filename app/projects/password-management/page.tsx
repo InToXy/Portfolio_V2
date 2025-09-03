@@ -26,7 +26,7 @@ export default function PasswordManagementProject() {
         {/* Project Image */}
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/secure-password-management-system-with-vault-integ.png"
+            src="/Portfolio_V2/secure-password-management-system-with-vault-integ.png"
             alt="Système de gestion des mots de passe"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

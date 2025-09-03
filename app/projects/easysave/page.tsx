@@ -25,7 +25,7 @@ export default function EasySaveProject() {
         {/* Project Image */}
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/professional-backup-software-interface-with-progre.png"
+            src="/Portfolio_V2/professional-backup-software-interface-with-progre.png"
             alt="Interface EasySave"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

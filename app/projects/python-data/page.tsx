@@ -21,7 +21,7 @@ export default function PythonDataProject() {
 
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/python-data-analysis-dashboard-with-charts--graphs.png"
+            src="/Portfolio_V2/python-data-analysis-dashboard-with-charts--graphs.png"
             alt="Analyse de données Python"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

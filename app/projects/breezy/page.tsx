@@ -25,7 +25,7 @@ export default function BreezyProject() {
         {/* Project Image */}
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/breezy.png"
+            src="/Portfolio_V2/breezy.png"
             alt="Interface Breezy"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

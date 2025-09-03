@@ -38,58 +38,30 @@ export default function DevOpsPortfolio() {
 
   const passionPhotos = {
     rando: [
-      {
-        src: "/rando/1.jpg",
-        alt: "Sommet de montagne au lever du soleil",
-      },
-      {
-        src: "/rando/2.jpg",
-        alt: "Sentier forestier en randonnée",
-      },
-      {
-        src: "/rando/3.jpg",
-        alt: "Lac de montagne et équipement de randonnée",
-      },
-      {
-        src: "/rando/4.jpg",
-        alt: "Chemin rocheux en montagne",
-      },
+      { src: "/Portfolio_V2/rando/1.jpg", alt: "Image de randonnée 1" },
+      { src: "/Portfolio_V2/rando/2.jpg", alt: "Image de randonnée 2" },
+      { src: "/Portfolio_V2/rando/3.jpg", alt: "Image de randonnée 3" },
+      { src: "/Portfolio_V2/rando/4.jpg", alt: "Image de randonnée 4" },
+      { src: "/Portfolio_V2/rando/5.jpg", alt: "Image de randonnée 5" },
     ],
     moto: [
-      {
-        src: "/moto/1.jpg",
-        alt: "Moto sur route de montagne",
-      },
-      {
-        src: "/moto/2.jpg",
-        alt: "Moteur de moto et outils mécaniques",
-      },
-      {
-        src: "/moto/3.jpg",
-        alt: "Équipement de moto et casque",
-      },
-      {
-        src: "/moto/4.jpg",
-        alt: "Moto garée avec vue panoramique",
-      },
+      { src: "/Portfolio_V2/moto/1.jpg", alt: "Image de moto 1" },
+      { src: "/Portfolio_V2/moto/2.jpg", alt: "Image de moto 2" },
+      { src: "/Portfolio_V2/moto/3.jpg", alt: "Image de moto 3" },
+      { src: "/Portfolio_V2/moto/4.jpg", alt: "Image de moto 4" },
     ],
     voyage: [
-      {
-        src: "/voyage/1.jpg",
-        alt: "Passeport et planification de voyage",
-      },
-      {
-        src: "/voyage/2.jpg",
-        alt: "Découverte de monument culturel",
-      },
-      {
-        src: "/voyage/3.jpg",
-        alt: "Marché local et immersion culturelle",
-      },
-      {
-        src: "/voyage/4.jpg",
-        alt: "Sac à dos et photographie de voyage",
-      },
+      { src: "/Portfolio_V2/voyage/1.jpg", alt: "Image de voyage 1" },
+      { src: "/Portfolio_V2/voyage/10.jpg", alt: "Image de voyage 10" },
+      { src: "/Portfolio_V2/voyage/11.jpg", alt: "Image de voyage 11" },
+      { src: "/Portfolio_V2/voyage/2.jpg", alt: "Image de voyage 2" },
+      { src: "/Portfolio_V2/voyage/3.jpg", alt: "Image de voyage 3" },
+      { src: "/Portfolio_V2/voyage/4.jpg", alt: "Image de voyage 4" },
+      { src: "/Portfolio_V2/voyage/5.jpg", alt: "Image de voyage 5" },
+      { src: "/Portfolio_V2/voyage/6.jpg", alt: "Image de voyage 6" },
+      { src: "/Portfolio_V2/voyage/7.jpg", alt: "Image de voyage 7" },
+      { src: "/Portfolio_V2/voyage/8.jpg", alt: "Image de voyage 8" },
+      { src: "/Portfolio_V2/voyage/9.jpg", alt: "Image de voyage 9" },
     ],
   }
 
@@ -121,7 +93,7 @@ export default function DevOpsPortfolio() {
           <div className="mb-8">
             {/* Animated Profile Image */}
             <img
-              src="/profile-5.png"
+              src="/Portfolio_V2/profile-5.png"
               alt="Mathéo Pinget - Photo professionnelle"
               className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-primary/10 animate-in zoom-in duration-1000 delay-300 hover:scale-110 transition-transform cursor-pointer"
             />
@@ -292,6 +264,15 @@ export default function DevOpsPortfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
+                title: "Serveur Multimédia Personnel",
+                description:
+                  "Mise en place d'une solution complète de gestion et de diffusion de contenu multimédia à domicile avec Docker et Docker Compose (Plex, Radarr, Jackett, Transmission, Flaresolverr).",
+                tech: ["Docker", "Docker Compose", "Plex", "Radarr", "Jackett", "Transmission", "FlareSolverr"],
+                image:
+                  "https://www.desdeelreloj.com/content/images/size/w1000/2024/05/ider-0861.jpg", // You can replace this with a relevant image
+                link: "/projects/media-server",
+              },
+              {
                 title: "Bot Trading - Bot de Trading Automatisé",
                 description:
                   "Développement d'un bot de trading automatisé utilisant l'API Binance pour exécuter des stratégies de trading sur les cryptomonnaies. L'objectif était de développer un système robuste capable d'analyser les données du marché en temps réel et de prendre des décisions d'achat ou de vente basées sur des indicateurs techniques.",
@@ -317,7 +298,7 @@ export default function DevOpsPortfolio() {
                   "Microservices",
                 ],
                 image:
-                  "/breezy.png",
+                  "/Portfolio_V2/breezy.png",
                 link: "/projects/breezy",
               },
               {
@@ -344,7 +325,7 @@ export default function DevOpsPortfolio() {
                   "Automation",
                 ],
                                 image:
-                  "/password_vault.png",
+                  "/Portfolio_V2/password_vault.png",
                 link: "/projects/password-management",
               },
               {
@@ -380,7 +361,7 @@ export default function DevOpsPortfolio() {
                   "Grafana",
                 ],
                 image:
-                  "/openstack-cloud-infrastructure-dashboard-with-virt.png",
+                  "/Portfolio_V2/openstack-cloud-infrastructure-dashboard-with-virt.png",
                 link: "/projects/openstack",
               },
               {
@@ -400,7 +381,7 @@ export default function DevOpsPortfolio() {
                   "Apache",
                 ],
                 image:
-                  "/network-security-audit-dashboard-with-vulnerabilit.png",
+                  "/Portfolio_V2/network-security-audit-dashboard-with-vulnerabilit.png",
                 link: "/projects/security",
               },
               {
@@ -409,7 +390,7 @@ export default function DevOpsPortfolio() {
                   "Projet en autonomie pour approfondir les techniques de Pentesting. Il a fallu répondre à un questionnaire technique en utilisant divers outils sur des machines virtuelles (Kali Linux, Windows, CentOS) pour identifier des vulnérabilités.",
                 tech: ["Kali Linux", "Metasploit", "Nmap", "Hydra", "SQLmap"],
                 image:
-                  "/web-application-penetration-testing-with-burp-suit.png",
+                  "/Portfolio_V2/web-application-penetration-testing-with-burp-suit.png",
                 link: "/projects/pentesting",
               },
               {
@@ -418,7 +399,7 @@ export default function DevOpsPortfolio() {
                   "Développement d'un script Python pour filtrer et analyser des données issues de fichiers de calendrier (.csv). L'objectif était d'extraire des informations spécifiques (événements, réunions) et de les présenter de manière claire sous forme de tableau (Markdown) et de graphiques.",
                 tech: ["Python", "CSV", "Markdown", "HTML/CSS"],
                 image:
-                  "/python-data-analysis-dashboard-with-charts--graphs.png",
+                  "/Portfolio_V2/python-data-analysis-dashboard-with-charts--graphs.png",
                 link: "/projects/python-data",
                 objectPosition: "top", // New property
               },

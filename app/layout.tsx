@@ -21,10 +21,12 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio DevOps - Ingénieur Infrastructure",
+  title: "Portfolio Matheo Pinget",
   description:
     "Portfolio professionnel d'un ingénieur DevOps spécialisé en infrastructure, automation, CI/CD et monitoring",
-  generator: "v0.app",
+  icons: {
+    icon: '/Portfolio_V2/FaviconMP.png',
+  },
 }
 
 export default function RootLayout({
