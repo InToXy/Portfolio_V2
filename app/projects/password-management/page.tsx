@@ -235,7 +235,7 @@ export default function PasswordManagementProject() {
             </a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="/documents/password-management-rapport.pdf" download>
+            <a href="/Portfolio_V2/documents/password-management-rapport.pdf" download>
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"

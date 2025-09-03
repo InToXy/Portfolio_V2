@@ -251,7 +251,7 @@ export default function RouteOptimizationProject() {
             </a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="/documents/route-optimization-diapo.pdf" download>
+            <a href="/Portfolio_V2/documents/route-optimization-diapo.pdf" download>
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
