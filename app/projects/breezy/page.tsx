@@ -25,7 +25,7 @@ export default function BreezyProject() {
         {/* Project Image */}
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/modern-social-media-interface-with-microservices-a.png"
+            src="/breezy.png"
             alt="Interface Breezy"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />
@@ -172,7 +172,7 @@ export default function BreezyProject() {
         {/* Actions */}
         <div className="flex gap-4 animate-in slide-in-from-bottom-4 duration-700 delay-800">
           <Button asChild>
-            <a href="https://github.com/InToXy" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/DAD-Equipe-5/Breezy" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
               Voir sur GitHub
             </a>

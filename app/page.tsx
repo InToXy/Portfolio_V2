@@ -19,6 +19,7 @@ import {
   Calendar,
   Phone,
   MapPin,
+  Cloudy,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { MouseFollower } from "@/components/mouse-follower"
@@ -29,69 +30,70 @@ import { PhotoGallery } from "@/components/photo-gallery"
 
 export default function DevOpsPortfolio() {
   const [galleryOpen, setGalleryOpen] = useState(false)
+  const [showWeather, setShowWeather] = useState(true)
   const [selectedPassion, setSelectedPassion] = useState<{
     title: string
     photos: { src: string; alt: string }[]
   } | null>(null)
 
   const passionPhotos = {
-    hiking: [
+    rando: [
       {
-        src: "/abstract-geometric-shapes.png?key=hiking1&height=600&width=800&query=mountain summit sunrise with hiker silhouette, alpine peaks, golden hour lighting",
+        src: "/rando/1.jpg",
         alt: "Sommet de montagne au lever du soleil",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=hiking2&height=600&width=800&query=forest hiking trail with tall trees, dappled sunlight, backpack and hiking boots",
+        src: "/rando/2.jpg",
         alt: "Sentier forestier en randonnée",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=hiking3&height=600&width=800&query=mountain lake reflection with hiking gear, peaceful alpine scenery, clear blue water",
+        src: "/rando/3.jpg",
         alt: "Lac de montagne et équipement de randonnée",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=hiking4&height=600&width=800&query=rocky mountain path with hiking poles, dramatic cliff views, adventure landscape",
+        src: "/rando/4.jpg",
         alt: "Chemin rocheux en montagne",
       },
     ],
-    motorcycle: [
+    moto: [
       {
-        src: "/abstract-geometric-shapes.png?key=moto1&height=600&width=800&query=motorcycle on scenic mountain road, winding curves, beautiful landscape view",
+        src: "/moto/1.jpg",
         alt: "Moto sur route de montagne",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=moto2&height=600&width=800&query=motorcycle engine close-up with tools, mechanical parts, garage workshop setting",
+        src: "/moto/2.jpg",
         alt: "Moteur de moto et outils mécaniques",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=moto3&height=600&width=800&query=motorcycle helmet and gloves on bike seat, safety gear, riding equipment",
+        src: "/moto/3.jpg",
         alt: "Équipement de moto et casque",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=moto4&height=600&width=800&query=motorcycle parked at scenic overlook, sunset view, touring adventure",
+        src: "/moto/4.jpg",
         alt: "Moto garée avec vue panoramique",
       },
     ],
-    travel: [
+    voyage: [
       {
-        src: "/abstract-geometric-shapes.png?key=travel1&height=600&width=800&query=passport with travel stamps, world map, airplane ticket, adventure planning",
+        src: "/voyage/1.jpg",
         alt: "Passeport et planification de voyage",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=travel2&height=600&width=800&query=famous landmark with tourist, cultural discovery, architectural monument",
+        src: "/voyage/2.jpg",
         alt: "Découverte de monument culturel",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=travel3&height=600&width=800&query=local market with colorful foods, cultural immersion, traditional crafts",
+        src: "/voyage/3.jpg",
         alt: "Marché local et immersion culturelle",
       },
       {
-        src: "/abstract-geometric-shapes.png?key=travel4&height=600&width=800&query=backpack and camera at scenic destination, travel photography, exploration",
+        src: "/voyage/4.jpg",
         alt: "Sac à dos et photographie de voyage",
       },
     ],
   }
 
-  const openGallery = (passionType: "hiking" | "motorcycle" | "travel", title: string) => {
+  const openGallery = (passionType: "rando" | "moto" | "voyage", title: string) => {
     setSelectedPassion({
       title,
       photos: passionPhotos[passionType],
@@ -104,9 +106,14 @@ export default function DevOpsPortfolio() {
       {/* Animated Background */}
       <AnimatedBackground />
       <MouseFollower />
-      <ThemeToggle />
+      <div className="fixed top-4 right-4 z-50 flex gap-2">
+        <ThemeToggle />
+        <Button variant="outline" size="icon" onClick={() => setShowWeather(!showWeather)}>
+          <Cloudy className="h-[1.2rem] w-[1.2rem]" />
+        </Button>
+      </div>
       {/* Weather Widget */}
-      <WeatherWidget />
+      {showWeather && <WeatherWidget />}
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center bg-gradient-to-br from-card to-background z-10 animate-in fade-in duration-1000">
@@ -228,7 +235,7 @@ export default function DevOpsPortfolio() {
               {
                 icon: <Monitor className="w-8 h-8" />,
                 title: "Programmation & Monitoring",
-                skills: ["Python", "Node.js", "Prometheus", "Grafana", "Zabbix", "API REST", "Centreon", "PRTG"],
+                skills: ["Python", "Node.js", "Prometheus", "Grafana", "Zabbix", "API REST", "Centreon", "PRTG", "JWT", "SQL", "HTML", "CSS", "Next"],
               },
               {
                 icon: <Server className="w-8 h-8" />,
@@ -238,7 +245,7 @@ export default function DevOpsPortfolio() {
               {
                 icon: <Database className="w-8 h-8" />,
                 title: "Gestion de Projet & Méthodologies",
-                skills: ["Méthodes agiles", "Scrum", "Gestion de projet", "SQL", "HTML", "CSS", "JWT"],
+                skills: ["Méthodes agiles", "Scrum", "Gestion de projet", ],
               },
             ].map((category, index) => (
               <Card
@@ -285,6 +292,15 @@ export default function DevOpsPortfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
+                title: "Bot Trading - Bot de Trading Automatisé",
+                description:
+                  "Développement d'un bot de trading automatisé utilisant l'API Binance pour exécuter des stratégies de trading sur les cryptomonnaies. L'objectif était de développer un système robuste capable d'analyser les données du marché en temps réel et de prendre des décisions d'achat ou de vente basées sur des indicateurs techniques.",
+                tech: ["Python", "Binance API", "Pandas", "NumPy", "TensorFlow", "Docker", "PostgreSQL", "Grafana"],
+                image:
+                  "https://www.ccn.com/wp-content/uploads/2023/07/Best-10-Crypto-Trading-Bots-For-2023-768x432.webp",
+                link: "/projects/bot-trading",
+              },
+              {
                 title: "Breezy - Réseau Social Léger",
                 description:
                   "Développement d'un réseau social réactif inspiré de Twitter/X, optimisé pour les environnements à faibles ressources. Architecture microservices avec Docker, authentification JWT, et interface React/Next.js responsive.",
@@ -301,7 +317,7 @@ export default function DevOpsPortfolio() {
                   "Microservices",
                 ],
                 image:
-                  "sleek mobile social media app interface with dark blue theme, floating message bubbles, user avatars, and modern UI components",
+                  "/breezy.png",
                 link: "/projects/breezy",
               },
               {
@@ -310,11 +326,11 @@ export default function DevOpsPortfolio() {
                   "Logiciel de sauvegarde professionnel évolutif en C#/.NET avec architecture MVC. Interface CLI et graphique WPF, chiffrement SHA-256, sauvegardes parallèles et gestion des priorités. Méthodologie Scrum avec Git workflow complet.",
                 tech: ["C#", ".NET 8.0", "WPF", "MVC", "SHA-256", "JSON", "Doxygen", "JIRA", "Git", "Scrum"],
                 image:
-                  "modern Windows desktop application with file backup progress, folder synchronization icons, and professional blue interface",
+                  "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/335885434_947583666249790_1080159461164491773_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=X_HBXkGyczkQ7kNvwGchm8I&_nc_oc=AdkPxsqfLuNilnH3aagQppGbGLxeQIDrPKn_fis6LXMJJUQZfN0UZD4QKlmpTOxz28iZEPW_fu3yepWkvnkAOzFh&_nc_zt=23&_nc_ht=scontent-cdg4-2.xx&_nc_gid=Vn1hpUOO0Icn9W0St11z8g&oh=00_AfY0tCm9Pqglp7BAI2u8IE7beExwcKwtvtdQxrwC0ahgiw&oe=68BE6A4E",
                 link: "/projects/easysave",
               },
               {
-                title: "Gestion Sécurisée des Mots de Passe",
+                title: "Vault Manager - Gestion des Mots de Passe",
                 description:
                   "Solution DevSecOps automatisée pour la gestion sécurisée des mots de passe d'infrastructure chez Orange Business. Pipeline CI/CD avec HashiCorp Vault, chiffrement AES-256, et traçabilité complète des opérations.",
                 tech: [
@@ -327,12 +343,12 @@ export default function DevOpsPortfolio() {
                   "DevSecOps",
                   "Automation",
                 ],
-                image:
-                  "cybersecurity vault interface with encrypted password manager, digital locks, security shields, and green authentication indicators",
+                                image:
+                  "/password_vault.png",
                 link: "/projects/password-management",
               },
               {
-                title: "Optimisation de Tournées - ADEME",
+                title: "ADEME - Recherche Opérationnelle",
                 description:
                   "Projet de recherche opérationnelle pour l'ADEME visant à réduire les émissions CO₂ des transports. Implémentation d'algorithmes d'optimisation (recuit simulé, génétique, colonie de fourmis) pour résoudre le problème du voyageur de commerce.",
                 tech: [
@@ -345,7 +361,7 @@ export default function DevOpsPortfolio() {
                   "Recherche Opérationnelle",
                 ],
                 image:
-                  "interactive map with optimized delivery routes, green eco-friendly paths, algorithm visualization, and CO2 reduction metrics",
+                  "https://medias.pourlascience.fr/api/v1/images/view/5a82b1128fe56f7c282a7d9c/wide_1000-webp/image.jpg",
                 link: "/projects/route-optimization",
               },
               {
@@ -364,7 +380,7 @@ export default function DevOpsPortfolio() {
                   "Grafana",
                 ],
                 image:
-                  "futuristic cloud datacenter with server racks, virtual machine instances, network topology diagram, and blue holographic displays",
+                  "/openstack-cloud-infrastructure-dashboard-with-virt.png",
                 link: "/projects/openstack",
               },
               {
@@ -384,7 +400,7 @@ export default function DevOpsPortfolio() {
                   "Apache",
                 ],
                 image:
-                  "digital fortress with multiple security layers, firewall barriers, network monitoring screens, and red security alerts",
+                  "/network-security-audit-dashboard-with-vulnerabilit.png",
                 link: "/projects/security",
               },
               {
@@ -393,7 +409,7 @@ export default function DevOpsPortfolio() {
                   "Projet en autonomie pour approfondir les techniques de Pentesting. Il a fallu répondre à un questionnaire technique en utilisant divers outils sur des machines virtuelles (Kali Linux, Windows, CentOS) pour identifier des vulnérabilités.",
                 tech: ["Kali Linux", "Metasploit", "Nmap", "Hydra", "SQLmap"],
                 image:
-                  "dark hacker terminal with green matrix code, vulnerability scan results, penetration testing tools, and ethical hacking interface",
+                  "/web-application-penetration-testing-with-burp-suit.png",
                 link: "/projects/pentesting",
               },
               {
@@ -402,8 +418,9 @@ export default function DevOpsPortfolio() {
                   "Développement d'un script Python pour filtrer et analyser des données issues de fichiers de calendrier (.csv). L'objectif était d'extraire des informations spécifiques (événements, réunions) et de les présenter de manière claire sous forme de tableau (Markdown) et de graphiques.",
                 tech: ["Python", "CSV", "Markdown", "HTML/CSS"],
                 image:
-                  "colorful data visualization dashboard with Python charts, CSV spreadsheets, calendar events, and interactive graphs",
+                  "/python-data-analysis-dashboard-with-charts--graphs.png",
                 link: "/projects/python-data",
+                objectPosition: "top", // New property
               },
             ].map((project, index) => (
               <Card
@@ -414,9 +431,10 @@ export default function DevOpsPortfolio() {
                 <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
                   {/* Animated Project Images */}
                   <img
-                    src={`/abstract-geometric-shapes.png?key=d2xj8&height=200&width=400&query=${project.image}`}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    style={project.objectPosition ? { objectPosition: project.objectPosition } : {}}
                   />
                 </div>
                 <CardHeader>
@@ -579,7 +597,7 @@ export default function DevOpsPortfolio() {
                 image:
                   "mountain hiking trail with backpack, scenic alpine landscape, sunrise over peaks, and outdoor adventure gear",
                 icon: "🥾",
-                type: "hiking" as const,
+                type: "rando" as const,
               },
               {
                 title: "Moto & Mécanique",
@@ -588,7 +606,7 @@ export default function DevOpsPortfolio() {
                 image:
                   "sleek motorcycle on winding mountain road, mechanical tools, engine details, and scenic riding landscape",
                 icon: "🏍️",
-                type: "motorcycle" as const,
+                type: "moto" as const,
               },
               {
                 title: "Voyage & Découverte",
@@ -597,7 +615,7 @@ export default function DevOpsPortfolio() {
                 image:
                   "world map with travel destinations, passport stamps, airplane, cultural landmarks, and adventure backpack",
                 icon: "✈️",
-                type: "travel" as const,
+                type: "voyage" as const,
               },
             ].map((passion, index) => (
               <Card
@@ -608,8 +626,8 @@ export default function DevOpsPortfolio() {
               >
                 <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
                   <img
-                    src={`/abstract-geometric-shapes.png?key=passion${index}&height=200&width=400&query=${passion.image}`}
-                    alt={passion.title}
+                    src={passionPhotos[passion.type][0].src} // Use the first image from passionPhotos
+                    alt={passionPhotos[passion.type][0].alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>

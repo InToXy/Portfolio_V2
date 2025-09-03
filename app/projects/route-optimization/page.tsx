@@ -245,9 +245,22 @@ export default function RouteOptimizationProject() {
         {/* Actions */}
         <div className="flex gap-4 animate-in slide-in-from-bottom-4 duration-700 delay-1000">
           <Button asChild>
-            <a href="https://github.com/InToXy" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/InToXy/Recherche-Operationnelle" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
               Voir sur GitHub
+            </a>
+          </Button>
+          <Button variant="secondary" asChild>
+            <a href="/documents/route-optimization-diapo.pdf" download>
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Télécharger Diapo
             </a>
           </Button>
           <Button variant="outline" asChild>
