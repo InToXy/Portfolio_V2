@@ -25,7 +25,7 @@ export default function RouteOptimizationProject() {
         {/* Project Image */}
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/route-optimization-algorithms-with-genetic-and-ant.png"
+            src="/Portfolio_V2/route-optimization-algorithms-with-genetic-and-ant.png"
             alt="Algorithmes d'optimisation de tournées"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

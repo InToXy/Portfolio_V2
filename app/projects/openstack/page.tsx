@@ -23,7 +23,7 @@ export default function OpenStackProject() {
 
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/openstack-cloud-infrastructure-dashboard-with-virt.png"
+            src="/Portfolio_V2/openstack-cloud-infrastructure-dashboard-with-virt.png"
             alt="Infrastructure OpenStack"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

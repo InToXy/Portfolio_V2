@@ -23,7 +23,7 @@ export default function SecurityProject() {
 
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/network-security-audit-dashboard-with-vulnerabilit.png"
+            src="/Portfolio_V2/network-security-audit-dashboard-with-vulnerabilit.png"
             alt="Infrastructure de sécurité"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />

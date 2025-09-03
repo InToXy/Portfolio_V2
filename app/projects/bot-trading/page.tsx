@@ -25,7 +25,7 @@ export default function BotTradingProject() {
         {/* Project Image */}
         <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
           <img
-            src="/Cover-16-1.png"
+            src="/Portfolio_V2/Cover-16-1.png"
             alt="Interface Bot Trading"
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />
