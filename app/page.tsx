@@ -306,8 +306,7 @@ export default function DevOpsPortfolio() {
                 description:
                   "Logiciel de sauvegarde professionnel évolutif en C#/.NET avec architecture MVC. Interface CLI et graphique WPF, chiffrement SHA-256, sauvegardes parallèles et gestion des priorités. Méthodologie Scrum avec Git workflow complet.",
                 tech: ["C#", ".NET 8.0", "WPF", "MVC", "SHA-256", "JSON", "Doxygen", "JIRA", "Git", "Scrum"],
-                image:
-                  "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/335885434_947583666249790_1080159461164491773_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=X_HBXkGyczkQ7kNvwGchm8I&_nc_oc=AdkPxsqfLuNilnH3aagQppGbGLxeQIDrPKn_fis6LXMJJUQZfN0UZD4QKlmpTOxz28iZEPW_fu3yepWkvnkAOzFh&_nc_zt=23&_nc_ht=scontent-cdg4-2.xx&_nc_gid=Vn1hpUOO0Icn9W0St11z8g&oh=00_AfY0tCm9Pqglp7BAI2u8IE7beExwcKwtvtdQxrwC0ahgiw&oe=68BE6A4E",
+                image:"/Portfolio_V2/easysave.jpg",
                 link: "/projects/easysave",
               },
               {
