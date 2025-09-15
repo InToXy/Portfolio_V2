@@ -150,6 +150,17 @@ export default function DevOpsPortfolio() {
                 Prendre RDV
               </a>
             </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="hover:scale-105 transition-all duration-300 bg-transparent"
+              asChild
+            >
+              <Link href="/cv">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Mon CV
+              </Link>
+            </Button>
           </div>
           {/* Animated Contact Information */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground animate-in fade-in duration-1000 delay-1100">
@@ -528,13 +539,18 @@ export default function DevOpsPortfolio() {
             {[
               {
                 degree: "Ingénierie Informatique",
-                school: "CESI École d'Ingénieurs",
+                school: "CESI École d'Ingénieurs, Lyon",
                 period: "2024 - 2027",
               },
               {
                 degree: "Licence en Réseaux et Télécommunications",
-                school: "IUT1 Grenoble",
+                school: "IUT1, Grenoble",
                 period: "2021 - 2024",
+              },
+              {
+                degree: "Baccalauréat Professionnel Systèmes Numériques RISC",
+                school: "Lycée Saint Vincent de Paul, Collonges-sous-Salève",
+                period: "2018 - 2021",
               },
             ].map((edu, index) => (
               <Card
