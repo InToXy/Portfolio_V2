@@ -20,13 +20,13 @@ Ce portfolio interactif présente mon parcours académique et professionnel en t
 
 ## Fonctionnalités Clés
 
--   **Présentation Dynamique**: Page d&apos;accueil interactive avec animations et effets visuels.
--   **Détails des Projets**: Sections dédiées pour chaque projet (Pentesting, Traitement de données, Cloud, Infra sécurisée, etc.) avec descriptions techniques et visuels.
--   **Expérience Professionnelle**: Mise en avant de mon alternance chez Orange, détaillant les missions et les acquis.
--   **Compétences Techniques**: Une vue d&apos;ensemble structurée de mes expertises (DevOps, Cloud, Réseaux, Cybersécurité, Programmation).
--   **CV Intégré**: Accès direct à une version web de mon CV et option de téléchargement au format PDF.
--   **Contact Facilité**: Informations de contact claires et liens vers mes profils professionnels (LinkedIn, GitHub).
--   **Navigation Intuitive**: Expérience utilisateur fluide et réactive, optimisée pour tous les appareils.
+- **Présentation Dynamique**: Page d&apos;accueil interactive avec animations et effets visuels.
+- **Détails des Projets**: Sections dédiées pour chaque projet (Pentesting, Traitement de données, Cloud, Infra sécurisée, etc.) avec descriptions techniques et visuels.
+- **Expérience Professionnelle**: Mise en avant de mon alternance chez Orange, détaillant les missions et les acquis.
+- **Compétences Techniques**: Une vue d&apos;ensemble structurée de mes expertises (DevOps, Cloud, Réseaux, Cybersécurité, Programmation).
+- **CV Intégré**: Accès direct à une version web de mon CV et option de téléchargement au format PDF.
+- **Contact Facilité**: Informations de contact claires et liens vers mes profils professionnels (LinkedIn, GitHub).
+- **Navigation Intuitive**: Expérience utilisateur fluide et réactive, optimisée pour tous les appareils.
 
 ## Structure du projet
 
@@ -86,8 +86,8 @@ Suivez ces étapes pour configurer et exécuter le projet en local :
 
 Assurez-vous d&apos;avoir installé :
 
--   Node.js (version 20 ou supérieure)
--   pnpm (gestionnaire de paquets)
+- Node.js (version 20 ou supérieure)
+- pnpm (gestionnaire de paquets)
 
 ### Installation
 
@@ -105,12 +105,12 @@ Assurez-vous d&apos;avoir installé :
 
 Dans le répertoire du projet, vous pouvez exécuter :
 
--   `pnpm dev` : Lance l&apos;application en mode développement. Ouvrez [http://localhost:3000](http://localhost:3000) pour la visualiser.
--   `pnpm build` : Construit l&apos;application pour la production.
--   `pnpm start` : Lance l&apos;application construite en production.
--   `pnpm lint` : Exécute ESLint pour vérifier les erreurs de code et les problèmes de style.
--   `pnpm format` : Formate le code source avec Prettier.
--   `pnpm tsc` : Exécute le vérificateur de types TypeScript.
+- `pnpm dev` : Lance l&apos;application en mode développement. Ouvrez [http://localhost:3000](http://localhost:3000) pour la visualiser.
+- `pnpm build` : Construit l&apos;application pour la production.
+- `pnpm start` : Lance l&apos;application construite en production.
+- `pnpm lint` : Exécute ESLint pour vérifier les erreurs de code et les problèmes de style.
+- `pnpm format` : Formate le code source avec Prettier.
+- `pnpm tsc` : Exécute le vérificateur de types TypeScript.
 
 ## Déploiement Continu et Qualité du Code avec GitHub Actions
 
