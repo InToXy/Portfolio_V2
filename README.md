@@ -12,22 +12,21 @@ Ce portfolio présente mes projets, mes compétences et mon expérience professi
 - [Technologies utilisées](#technologies-utilisées)
 - [Déploiement continu avec GitHub Actions](#déploiement-continu-avec-github-actions)
 
-
 - [Contact](#contact)
 
-## Description du projet
+## Description du Projet
 
-Ce site web statique est conçu pour mettre en valeur mon parcours académique et professionnel. Il sert de vitrine pour mes réalisations techniques et mes compétences dans le domaine des réseaux et des télécommunications.
+Ce portfolio interactif présente mon parcours académique et professionnel en tant qu&apos;ingénieur DevOps et Cloud. Il met en lumière mes compétences techniques, mes projets significatifs et mon expérience en alternance, offrant une vitrine complète de mes réalisations dans les domaines des réseaux, de la cybersécurité, de l&apos;automatisation et du cloud.
 
-## Fonctionnalités
+## Fonctionnalités Clés
 
-- **Page d'accueil interactive** : Présentation générale et navigation fluide.
-- **Section Projets** : Détails de mes réalisations en Pentesting, Traitement de données, Cloud, et Infrastructure sécurisée, avec un carrousel pour une navigation facile.
-- **Expérience en Alternance** : Description de mon expérience chez Orange.
-- **Compétences** : Liste détaillée de mes compétences techniques.
-- **CV en ligne** : Une version web de mon CV et un lien pour télécharger le format PDF.
-- **Contact** : Informations pour me contacter (email, téléphone, LinkedIn).
-- **Navigation "single-page"** : Expérience utilisateur optimisée avec défilement.
+- **Présentation Dynamique**: Page d&apos;accueil interactive avec animations et effets visuels.
+- **Détails des Projets**: Sections dédiées pour chaque projet (Pentesting, Traitement de données, Cloud, Infra sécurisée, etc.) avec descriptions techniques et visuels.
+- **Expérience Professionnelle**: Mise en avant de mon alternance chez Orange, détaillant les missions et les acquis.
+- **Compétences Techniques**: Une vue d&apos;ensemble structurée de mes expertises (DevOps, Cloud, Réseaux, Cybersécurité, Programmation).
+- **CV Intégré**: Accès direct à une version web de mon CV et option de téléchargement au format PDF.
+- **Contact Facilité**: Informations de contact claires et liens vers mes profils professionnels (LinkedIn, GitHub).
+- **Navigation Intuitive**: Expérience utilisateur fluide et réactive, optimisée pour tous les appareils.
 
 ## Structure du projet
 
@@ -67,40 +66,90 @@ Le projet est organisé de la manière suivante :
 └── ...
 ```
 
-## Technologies utilisées
+## Technologies Utilisées
 
-Le portfolio est développé en utilisant les technologies suivantes :
+Ce portfolio est développé en utilisant les technologies et outils suivants :
 
-- **Développement Web** : HTML, CSS, JavaScript
-- **Framework Frontend** : Next.js (React)
-- **Styling** : Tailwind CSS (via `postcss.config.mjs`)
-- **Gestion de paquets** : pnpm
-- **Bibliothèques JavaScript** :
-    - jQuery
-    - Hammer.js
-    - Magnific Popup
-    - Shuffle.js
-    - Owl Carousel
+- **Framework Frontend**: Next.js (React)
+- **Langage**: TypeScript
+- **Styling**: Tailwind CSS, PostCSS
+- **Gestion de paquets**: pnpm
+- **Formatage de code**: Prettier
+- **Analyse de code statique**: ESLint, CodeQL
+- **Déploiement**: GitHub Actions (pour GitHub Pages)
 
+## Mise en place et Utilisation
 
+Suivez ces étapes pour configurer et exécuter le projet en local :
 
+### Prérequis
 
+Assurez-vous d&apos;avoir installé :
 
-## Déploiement continu avec GitHub Actions
+- Node.js (version 20 ou supérieure)
+- pnpm (gestionnaire de paquets)
 
-Ce projet utilise GitHub Actions pour automatiser le processus de déploiement. Chaque fois qu'une modification est poussée sur la branche `main`, un workflow est déclenché pour :
+### Installation
 
-1.  **Cloner le dépôt**.
-2.  **Installer les dépendances** du projet avec pnpm.
-3.  **Construire l'application Next.js** pour la production.
-4.  **Déployer le site statique** sur GitHub Pages.
+1.  Clonez le dépôt :
+    ```bash
+    git clone https://github.com/InToXy/Portfolio_V2.git
+    cd Portfolio_V2
+    ```
+2.  Installez les dépendances :
+    ```bash
+    pnpm install
+    ```
 
-Ce processus garantit que la version la plus récente du portfolio est toujours disponible en ligne, sans intervention manuelle.
+### Scripts disponibles
+
+Dans le répertoire du projet, vous pouvez exécuter :
+
+- `pnpm dev` : Lance l&apos;application en mode développement. Ouvrez [http://localhost:3000](http://localhost:3000) pour la visualiser.
+- `pnpm build` : Construit l&apos;application pour la production.
+- `pnpm start` : Lance l&apos;application construite en production.
+- `pnpm lint` : Exécute ESLint pour vérifier les erreurs de code et les problèmes de style.
+- `pnpm format` : Formate le code source avec Prettier.
+- `pnpm tsc` : Exécute le vérificateur de types TypeScript.
+
+## Déploiement Continu et Qualité du Code avec GitHub Actions
+
+Ce projet utilise GitHub Actions pour automatiser plusieurs aspects du développement et du déploiement :
+
+### Workflows de Qualité du Code
+
+- **Analyse Statique (CodeQL)**: Un workflow dédié (`codeql.yml`) analyse le code pour détecter les vulnérabilités de sécurité et les erreurs potentielles. Il est déclenché sur les `push` et `pull_request` vers `main`, ainsi que de manière hebdomadaire.
+- **Linting et Type Checking**: Avant chaque déploiement, le code est vérifié avec ESLint (`pnpm lint`) pour le style et les bonnes pratiques, et avec TypeScript (`pnpm tsc`) pour la cohérence des types.
+
+### Workflow de Déploiement
+
+Le workflow de déploiement (`nextjs.yml`) est déclenché sur chaque `push` vers la branche `main` et manuellement via `workflow_dispatch`. Il effectue les étapes suivantes :
+
+1.  **Clonage du dépôt**.
+2.  **Configuration de pnpm et Node.js**.
+3.  **Restauration du cache** pour optimiser les temps de build.
+4.  **Installation des dépendances** avec pnpm.
+5.  **Exécution du Linter** (`pnpm lint`).
+6.  **Vérification des Types** (`pnpm tsc`).
+7.  **Construction de l&apos;application Next.js** pour la production (`pnpm next build`).
+8.  **Téléchargement des artefacts** de build.
+9.  **Déploiement du site statique** sur GitHub Pages.
+
+Ce processus garantit non seulement que la version la plus récente du portfolio est toujours disponible en ligne, mais aussi qu&apos;elle respecte des standards élevés de qualité et de sécurité.
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## Changelog
+
+Consultez le fichier [CHANGELOG.md](CHANGELOG.md) pour un historique complet des modifications.
 
 ## Contact
 
-N'hésitez pas à me contacter pour toute question ou opportunité :
+N&apos;hésitez pas à me contacter pour toute question ou opportunité :
 
 - **Email** : matheo.pinget@gmail.com
 - **Téléphone** : 06.40.24.07.08
-- **LinkedIn** : [Votre profil LinkedIn](https://www.linkedin.com/in/matheo-pinget-8a60252a9/)
+- **LinkedIn** : [Matheo Pinget](https://www.linkedin.com/in/matheo-pinget-8a60252a9/)
+- **GitHub** : [InToXy](https://github.com/InToXy)
