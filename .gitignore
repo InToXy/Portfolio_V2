@@ -25,3 +25,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# husky
+.husky/
+
+# test coverage
+/coverage/
+
+# local development
+.DS_Store
+.vscode/
