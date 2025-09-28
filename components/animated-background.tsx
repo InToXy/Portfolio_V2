@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
 export function AnimatedBackground() {
   const [particles, setParticles] = useState<
@@ -30,13 +30,23 @@ export function AnimatedBackground() {
 
     const animateParticles = () => {
       setParticles((prev) =>
-        prev.map((particle) => ({
-          ...particle,
-          x: particle.x + particle.speedX,
-          y: particle.y + particle.speedY,
-          x: particle.x > window.innerWidth ? 0 : particle.x < 0 ? window.innerWidth : particle.x,
-          y: particle.y > window.innerHeight ? 0 : particle.y < 0 ? window.innerHeight : particle.y,
-        })),
+        prev.map((particle) => {
+          let newX = particle.x + particle.speedX
+          let newY = particle.y + particle.speedY
+
+          // Wrap around screen boundaries
+          if (newX > window.innerWidth) newX = 0
+          else if (newX < 0) newX = window.innerWidth
+
+          if (newY > window.innerHeight) newY = 0
+          else if (newY < 0) newY = window.innerHeight
+
+          return {
+            ...particle,
+            x: newX,
+            y: newY,
+          }
+        }),
       )
     }
 
@@ -45,18 +55,18 @@ export function AnimatedBackground() {
   }, [])
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {/* Gradient Background */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 animate-pulse"
-        style={{ animationDuration: "8s" }}
+        className="from-primary/5 to-accent/5 absolute inset-0 animate-pulse bg-gradient-to-br via-transparent"
+        style={{ animationDuration: '8s' }}
       />
 
       {/* Floating Particles */}
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="absolute rounded-full bg-primary/20 animate-pulse"
+          className="bg-primary/20 absolute animate-pulse rounded-full"
           style={{
             left: `${particle.x}px`,
             top: `${particle.y}px`,
@@ -71,16 +81,16 @@ export function AnimatedBackground() {
 
       {/* Geometric Shapes */}
       <div
-        className="absolute top-1/4 left-1/4 w-32 h-32 border border-primary/10 rotate-45 animate-spin"
-        style={{ animationDuration: "20s" }}
+        className="border-primary/10 absolute top-1/4 left-1/4 h-32 w-32 rotate-45 animate-spin border"
+        style={{ animationDuration: '20s' }}
       />
       <div
-        className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-accent/10 rotate-12 animate-bounce"
-        style={{ animationDuration: "6s" }}
+        className="border-accent/10 absolute right-1/4 bottom-1/4 h-24 w-24 rotate-12 animate-bounce border"
+        style={{ animationDuration: '6s' }}
       />
       <div
-        className="absolute top-1/2 right-1/3 w-16 h-16 bg-primary/5 rounded-full animate-ping"
-        style={{ animationDuration: "4s" }}
+        className="bg-primary/5 absolute top-1/2 right-1/3 h-16 w-16 animate-ping rounded-full"
+        style={{ animationDuration: '4s' }}
       />
     </div>
   )

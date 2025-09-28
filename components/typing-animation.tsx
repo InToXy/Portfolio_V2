@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
 interface TypingAnimationProps {
   text: string
@@ -8,8 +8,8 @@ interface TypingAnimationProps {
   speed?: number
 }
 
-export function TypingAnimation({ text, className = "", speed = 100 }: TypingAnimationProps) {
-  const [displayedText, setDisplayedText] = useState("")
+export function TypingAnimation({ text, className = '', speed = 100 }: TypingAnimationProps) {
+  const [displayedText, setDisplayedText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
 
@@ -36,7 +36,7 @@ export function TypingAnimation({ text, className = "", speed = 100 }: TypingAni
     <span className={className}>
       {displayedText}
       <span
-        className={`inline-block w-0.5 h-8 bg-primary ml-1 ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity`}
+        className={`bg-primary ml-1 inline-block h-8 w-0.5 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}
       >
         |
       </span>

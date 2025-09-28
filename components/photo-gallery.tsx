@@ -1,6 +1,7 @@
-"use client"
+'use client'
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import Image from 'next/image'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 
 interface Photo {
   src: string
@@ -17,20 +18,24 @@ interface PhotoGalleryProps {
 export function PhotoGallery({ isOpen, onClose, title, photos }: PhotoGalleryProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
+      <DialogContent className="h-[80vh] w-full max-w-4xl p-0">
         <DialogHeader className="p-6 pb-0">
-          <DialogTitle className="text-2xl font-bold text-center">{title}</DialogTitle>
+          <DialogTitle className="text-center text-2xl font-bold">{title}</DialogTitle>
         </DialogHeader>
 
-        <div className="relative flex-1 flex items-center justify-center p-6">
+        <div className="relative flex flex-1 items-center justify-center p-6">
           {/* Horizontal Scrollable Image Strip */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory w-full h-full items-center pb-4">
+          <div className="flex h-full w-full snap-x snap-mandatory items-center overflow-x-auto pb-4">
             {photos.map((photo, index) => (
-              <div key={index} className="flex-shrink-0 w-full snap-center flex justify-center items-center aspect-video">
-                <img
-                  src={photo.src || "/Portfolio_V2/placeholder.svg"}
+              <div
+                key={index}
+                className="relative flex aspect-video w-full flex-shrink-0 snap-center items-center justify-center"
+              >
+                <Image
+                  src={photo.src || '/Portfolio_V2/placeholder.svg'}
                   alt={photo.alt}
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                  fill // Use fill for responsive images within a container
+                  className="rounded-lg object-cover shadow-lg"
                 />
               </div>
             ))}

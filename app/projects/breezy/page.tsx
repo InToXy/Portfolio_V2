@@ -1,57 +1,63 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
-import { ArrowLeft, Github, Users, MessageCircle, Heart, Share2 } from "lucide-react"
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowLeft, Github, Users, MessageCircle, Heart, Share2 } from 'lucide-react'
 
 export default function BreezyProject() {
   return (
-    <div className="min-h-screen bg-background animate-in fade-in duration-1000">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="bg-background animate-in fade-in min-h-screen duration-1000">
+      <div className="mx-auto max-w-4xl px-4 py-8">
         {/* Header */}
-        <div className="mb-8 animate-in slide-in-from-top-4 duration-700">
+        <div className="animate-in slide-in-from-top-4 mb-8 duration-700">
           <Button variant="ghost" asChild className="mb-4">
             <Link href="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="mr-2 h-4 w-4" />
               Retour au portfolio
             </Link>
           </Button>
-          <h1 className="font-heading font-bold text-4xl text-primary mb-4">Breezy - Réseau Social Léger</h1>
-          <p className="text-xl text-muted-foreground">
-            Développement d'un réseau social réactif et optimisé pour les environnements à faibles ressources
+          <h1 className="font-heading text-primary mb-4 text-4xl font-bold">
+            Breezy - Réseau Social Léger
+          </h1>
+          <p className="text-muted-foreground text-xl">
+            Développement d&apos;un réseau social réactif et optimisé pour les environnements à
+            faibles ressources
           </p>
         </div>
 
         {/* Project Image */}
-        <div className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-200">
-          <img
+        <div className="animate-in slide-in-from-bottom-4 mb-8 delay-200 duration-700">
+          <Image
             src="/Portfolio_V2/breezy.png"
             alt="Interface Breezy"
-            className="w-full h-64 object-cover rounded-lg shadow-lg"
+            width={1024} // Placeholder: please adjust if actual image dimensions are different
+            height={256} // Placeholder: please adjust if actual image dimensions are different
+            className="h-64 w-full rounded-lg object-cover shadow-lg"
           />
         </div>
 
         {/* Technologies */}
-        <Card className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+        <Card className="animate-in slide-in-from-bottom-4 mb-8 delay-300 duration-700">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Share2 className="w-5 h-5" />
+              <Share2 className="h-5 w-5" />
               Technologies Utilisées
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-2">
               {[
-                "Node.js",
-                "Express",
-                "MongoDB",
-                "React",
-                "Next.js",
-                "TailwindCSS",
-                "Docker",
-                "Traefik",
-                "JWT",
-                "Microservices",
+                'Node.js',
+                'Express',
+                'MongoDB',
+                'React',
+                'Next.js',
+                'TailwindCSS',
+                'Docker',
+                'Traefik',
+                'JWT',
+                'Microservices',
               ].map((tech, index) => (
                 <Badge key={index} variant="secondary">
                   {tech}
@@ -62,51 +68,53 @@ export default function BreezyProject() {
         </Card>
 
         {/* Context and Objectives */}
-        <Card className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-400">
+        <Card className="animate-in slide-in-from-bottom-4 mb-8 delay-400 duration-700">
           <CardHeader>
             <CardTitle>Contexte et Objectifs</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
-              Développement d'un réseau social léger et réactif, inspiré de Twitter/X, conçu pour fonctionner
-              efficacement dans des environnements à faibles ressources et avec une connectivité limitée.
+              Développement d&apos;un réseau social léger et réactif, inspiré de Twitter/X, conçu
+              pour fonctionner efficacement dans des environnements à faibles ressources et avec une
+              connectivité limitée.
             </p>
             <p>
-              L'objectif principal était d'offrir une expérience utilisateur simple et fluide permettant de publier,
-              liker, commenter, suivre et être suivi, tout en maintenant des performances optimales.
+              L&apos;objectif principal était d&apos;offrir une expérience utilisateur simple et
+              fluide permettant de publier, liker, commenter, suivre et être suivi, tout en
+              maintenant des performances optimales.
             </p>
           </CardContent>
         </Card>
 
         {/* Key Features */}
-        <Card className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-500">
+        <Card className="animate-in slide-in-from-bottom-4 mb-8 delay-500 duration-700">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Users className="w-5 h-5" />
+              <Users className="h-5 w-5" />
               Fonctionnalités Principales
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="space-y-2">
-                <h4 className="font-semibold flex items-center gap-2">
-                  <MessageCircle className="w-4 h-4" />
+                <h4 className="flex items-center gap-2 font-semibold">
+                  <MessageCircle className="h-4 w-4" />
                   Gestion des Publications
                 </h4>
-                <ul className="text-sm text-muted-foreground space-y-1">
+                <ul className="text-muted-foreground space-y-1 text-sm">
                   <li>• Messages courts (280 caractères)</li>
-                  <li>• Fil d'actualité chronologique</li>
+                  <li>• Fil d&apos;actualité chronologique</li>
                   <li>• Système de commentaires et réponses</li>
                 </ul>
               </div>
               <div className="space-y-2">
-                <h4 className="font-semibold flex items-center gap-2">
-                  <Heart className="w-4 h-4" />
+                <h4 className="flex items-center gap-2 font-semibold">
+                  <Heart className="h-4 w-4" />
                   Interactions Sociales
                 </h4>
-                <ul className="text-sm text-muted-foreground space-y-1">
+                <ul className="text-muted-foreground space-y-1 text-sm">
                   <li>• Système de likes</li>
-                  <li>• Suivi d'utilisateurs</li>
+                  <li>• Suivi d&apos;utilisateurs</li>
                   <li>• Profils personnalisés avec bio</li>
                 </ul>
               </div>
@@ -115,14 +123,14 @@ export default function BreezyProject() {
         </Card>
 
         {/* Architecture */}
-        <Card className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-600">
+        <Card className="animate-in slide-in-from-bottom-4 mb-8 delay-600 duration-700">
           <CardHeader>
             <CardTitle>Architecture Technique</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <h4 className="font-semibold mb-2">Backend - Architecture Microservices</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
+              <h4 className="mb-2 font-semibold">Backend - Architecture Microservices</h4>
+              <ul className="text-muted-foreground space-y-1 text-sm">
                 <li>• Services indépendants : auth, users, posts, feed</li>
                 <li>• Node.js + Express pour chaque microservice</li>
                 <li>• MongoDB avec Mongoose pour la persistance</li>
@@ -131,8 +139,8 @@ export default function BreezyProject() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">Frontend - Interface Moderne</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
+              <h4 className="mb-2 font-semibold">Frontend - Interface Moderne</h4>
+              <ul className="text-muted-foreground space-y-1 text-sm">
                 <li>• React.js avec Next.js pour le SSR</li>
                 <li>• TailwindCSS avec approche mobile-first</li>
                 <li>• Axios pour la communication API</li>
@@ -143,23 +151,23 @@ export default function BreezyProject() {
         </Card>
 
         {/* Results and Learning */}
-        <Card className="mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-700">
+        <Card className="animate-in slide-in-from-bottom-4 mb-8 delay-700 duration-700">
           <CardHeader>
             <CardTitle>Résultats et Apprentissages</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <h4 className="font-semibold mb-2">Réalisations</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Création d'un réseau social fonctionnel et extensible</li>
+              <h4 className="mb-2 font-semibold">Réalisations</h4>
+              <ul className="text-muted-foreground space-y-1 text-sm">
+                <li>• Création d&apos;un réseau social fonctionnel et extensible</li>
                 <li>• Expérience utilisateur fluide, optimisée mobile</li>
                 <li>• Architecture scalable et maintenable</li>
                 <li>• Pipeline CI/CD avec ESLint et Snyk pour la sécurité</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">Compétences Développées</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
+              <h4 className="mb-2 font-semibold">Compétences Développées</h4>
+              <ul className="text-muted-foreground space-y-1 text-sm">
                 <li>• Architecture microservices et conteneurisation</li>
                 <li>• Sécurisation avec JWT et gestion des sessions</li>
                 <li>• Développement full-stack moderne</li>
@@ -170,16 +178,20 @@ export default function BreezyProject() {
         </Card>
 
         {/* Actions */}
-        <div className="flex gap-4 animate-in slide-in-from-bottom-4 duration-700 delay-800">
+        <div className="animate-in slide-in-from-bottom-4 flex gap-4 delay-800 duration-700">
           <Button asChild>
-            <a href="https://github.com/DAD-Equipe-5/Breezy" target="_blank" rel="noopener noreferrer">
-              <Github className="w-4 h-4 mr-2" />
+            <a
+              href="https://github.com/DAD-Equipe-5/Breezy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="mr-2 h-4 w-4" />
               Voir sur GitHub
             </a>
           </Button>
           <Button variant="secondary" asChild>
             <a href="/Portfolio_V2/documents/breezy-rapport-soutenance.pdf" download>
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -192,7 +204,7 @@ export default function BreezyProject() {
           </Button>
           <Button variant="outline" asChild>
             <Link href="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="mr-2 h-4 w-4" />
               Retour au portfolio
             </Link>
           </Button>
