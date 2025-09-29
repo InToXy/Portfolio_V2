@@ -323,7 +323,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'Serveur Multimédia Personnel',
                 description:
-                  'Mise en place d&apos;une solution complète de gestion et de diffusion de contenu multimédia à domicile avec Docker et Docker Compose (Plex, Radarr, Jackett, Transmission, Flaresolverr).',
+                  "Mise en place d'une solution complète de gestion et de diffusion de contenu multimédia à domicile avec Docker et Docker Compose (Plex, Radarr, Jackett, Transmission, Flaresolverr).",
                 tech: [
                   'Docker',
                   'Docker Compose',
@@ -340,7 +340,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'Bot Trading - Bot de Trading Automatisé',
                 description:
-                  'Développement d&apos;un bot de trading automatisé utilisant l&apos;API Binance pour exécuter des stratégies de trading sur les cryptomonnaies. L&apos;objectif était de développer un système robuste capable d&apos;analyser les données du marché en temps réel et de prendre des décisions d&apos;achat ou de vente basées sur des indicateurs techniques.',
+                  "Développement d'un bot de trading automatisé utilisant l'API Binance pour exécuter des stratégies de trading sur les cryptomonnaies. L'objectif était de développer un système robuste capable d'analyser les données du marché en temps réel et de prendre des décisions d'achat ou de vente basées sur des indicateurs techniques.",
                 tech: [
                   'Python',
                   'Binance API',
@@ -358,7 +358,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'Breezy - Réseau Social Léger',
                 description:
-                  'Développement d&apos;un réseau social réactif inspiré de Twitter/X, optimisé pour les environnements à faibles ressources. Architecture microservices avec Docker, authentification JWT, et interface React/Next.js responsive.',
+                  "Développement d'un réseau social réactif inspiré de Twitter/X, optimisé pour les environnements à faibles ressources. Architecture microservices avec Docker, authentification JWT, et interface React/Next.js responsive.",
                 tech: [
                   'Node.js',
                   'Express',
@@ -396,7 +396,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'Vault Manager - Gestion des Mots de Passe',
                 description:
-                  'Solution DevSecOps automatisée pour la gestion sécurisée des mots de passe d&apos;infrastructure chez Orange Business. Pipeline CI/CD avec HashiCorp Vault, chiffrement AES-256, et traçabilité complète des opérations.',
+                  "Solution DevSecOps automatisée pour la gestion sécurisée des mots de passe d'infrastructure chez Orange Business. Pipeline CI/CD avec HashiCorp Vault, chiffrement AES-256, et traçabilité complète des opérations.",
                 tech: [
                   'HashiCorp Vault',
                   'Ansible',
@@ -413,7 +413,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'ADEME - Recherche Opérationnelle',
                 description:
-                  'Projet de recherche opérationnelle pour l&apos;ADEME visant à réduire les émissions CO₂ des transports. Implémentation d&apos;algorithmes d&apos;optimisation (recuit simulé, génétique, colonie de fourmis) pour résoudre le problème du voyageur de commerce.',
+                  "Projet de recherche opérationnelle pour l'ADEME visant à réduire les émissions CO₂ des transports. Implémentation d'algorithmes d'optimisation (recuit simulé, génétique, colonie de fourmis) pour résoudre le problème du voyageur de commerce.",
                 tech: [
                   'Python',
                   'PLNE',
@@ -430,7 +430,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'Création d&apos;une infrastructure Cloud avec OpenStack',
                 description:
-                  'Construction d&apos;un réseau informatique pour une petite structure à l&apos;aide d&apos;OpenStack. Le projet impliquait la mise en place de serveurs virtuels (CentOS, Windows 10), la configuration d&apos;un réseau privé, la gestion des adresses IP et la configuration des routages pour assurer la communication entre les machines.',
+                  "Construction d&apos;un réseau informatique pour une petite structure à l'aide d'OpenStack. Le projet impliquait la mise en place de serveurs virtuels (CentOS, Windows 10), la configuration d&apos;un réseau privé, la gestion des adresses IP et la configuration des routages pour assurer la communication entre les machines.",
                 tech: [
                   'OpenStack',
                   'CentOS 8',
@@ -446,9 +446,9 @@ export default function DevOpsPortfolio() {
                 link: '/projects/openstack',
               },
               {
-                title: 'Sécurisation d&apos;un Système d&apos;Information',
+                title: "Sécurisation d'un Système d'Information",
                 description:
-                  'Conception d&apos;une infrastructure d&apos;entreprise complète de A à Z en suivant les recommandations de l&apos;ANSSI. Le projet incluait la création d&apos;une DMZ, la configuration d&apos;un SI interne, et la mise en place de multiples couches de sécurité et de supervision.',
+                  "Conception d'une infrastructure d'entreprise complète de A à Z en suivant les recommandations de l'ANSSI. Le projet incluait la création d'une DMZ, la configuration d'un SI interne, et la mise en place de multiples couches de sécurité et de supervision.",
                 tech: [
                   'ESXI 6.7',
                   'Cisco',
@@ -475,7 +475,7 @@ export default function DevOpsPortfolio() {
               {
                 title: 'Traitement de données avec Python',
                 description:
-                  'Développement d&apos;un script Python pour filtrer et analyser des données issues de fichiers de calendrier (.csv). L&apos;objectif était d&apos;extraire des informations spécifiques (événements, réunions) et de les présenter de manière claire sous forme de tableau (Markdown) et de graphiques.',
+                  "Développement d'un script Python pour filtrer et analyser des données issues de fichiers de calendrier (.csv). L'objectif était d'extraire des informations spécifiques (événements, réunions) et de les présenter de manière claire sous forme de tableau (Markdown) et de graphiques.",
                 tech: ['Python', 'CSV', 'Markdown', 'HTML/CSS'],
                 image: '/Portfolio_V2/python-data-analysis-dashboard-with-charts--graphs.png',
                 link: '/projects/python-data',
@@ -548,10 +548,10 @@ export default function DevOpsPortfolio() {
                 company: 'Orange Business',
                 period: '2024 - 2027 (en alternance)',
                 achievements: [
-                  'Automatisation du déploiement d&apos;infrastructures avec Terraform et Ansible',
+                  "Automatisation du déploiement d'infrastructures avec Terraform et Ansible",
                   'Gestion de pipelines CI/CD avec GitLab CI et Docker',
                   'Supervision des infrastructures avec Prometheus, Grafana',
-                  'Développement d&apos;un projet Git pour automatiser la récupération sécurisée de mots de passe dans HashiVault',
+                  "Développement d'un projet Git pour automatiser la récupération sécurisée de mots de passe dans HashiVault",
                 ],
               },
               {
@@ -560,7 +560,7 @@ export default function DevOpsPortfolio() {
                 period: '2022 - 2024 (en alternance)',
                 achievements: [
                   'Installation et configuration de routeurs, switches et firewalls',
-                  'Développement d&apos;un outil Python pour détecter des problèmes sur la fibre optique',
+                  "Développement d'un outil Python pour détecter des problèmes sur la fibre optique",
                   'Travail en équipe et communication avec les clients pour résoudre des problèmes techniques',
                 ],
               },
@@ -615,7 +615,7 @@ export default function DevOpsPortfolio() {
             {[
               {
                 degree: 'Ingénierie Informatique',
-                school: 'CESI École d&apos;Ingénieurs, Lyon',
+                school: "CESI École d'Ingénieurs, Lyon",
                 period: '2024 - 2027',
               },
               {
