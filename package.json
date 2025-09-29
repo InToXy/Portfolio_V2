@@ -7,8 +7,12 @@
     "dev": "next dev",
     "lint": "next lint",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "start": "next start",
     "test": "jest",
+    "test:unit": "jest --coverage --config jest.config.js",
+    "test:integration": "jest --config jest.integration.config.js",
+    "tsc": "tsc --noEmit",
     "prepare": "husky"
   },
   "dependencies": {
