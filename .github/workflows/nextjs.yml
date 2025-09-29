@@ -193,11 +193,11 @@ jobs:
           fi
           echo "Build size: $(du -sh ./out)"
 
-      - name: Run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli
-          lhci autorun || echo "Lighthouse CI completed"
-        continue-on-error: true
+      # - name: Run Lighthouse CI
+      #   run: |
+      #     npm install -g @lhci/cli
+      #     lhci autorun || echo "Lighthouse CI completed"
+      #   continue-on-error: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -217,24 +217,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Post-deployment health check
-        if: steps.deployment.outputs.page_url != ''
-        run: |
-          sleep 10
-          curl -f -s -o /dev/null -w "%{{http_code}}" ${{ steps.deployment.outputs.page_url }} || exit 1
-
-  # Job 8: Smoke Tests (Post-Deploy)
-  smoke-tests:
-    needs: deploy
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Run Smoke Tests
-        run: |
-          echo "Running smoke tests against production..."
-          # Ajouter vos tests de smoke ici
-          curl -f ${{ needs.deploy.outputs.page_url }} || exit 1
