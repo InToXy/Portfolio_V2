@@ -1,5 +1,8 @@
 # Portfolio de Matheo Pinget
 
+![CI/CD](https://github.com/InToXy/Portfolio_V2/actions/workflows/nextjs.yml/badge.svg)
+[![codecov](https://codecov.io/gh/InToXy/Portfolio_V2/branch/main/graph/badge.svg)](https://codecov.io/gh/InToXy/Portfolio_V2)
+
 Bienvenue sur le dépôt GitHub du portfolio de Matheo Pinget, étudiant en Réseaux et Télécommunication.
 
 Ce portfolio présente mes projets, mes compétences et mon expérience professionnelle, notamment mon alternance chez Orange.
