@@ -17,14 +17,14 @@ export function AnimatedBackground() {
 
   useEffect(() => {
     // Create floating particles
-    const newParticles = Array.from({ length: 20 }, (_, i) => ({
+    const newParticles = Array.from({ length: 15 }, (_, i) => ({
       id: i,
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       size: Math.random() * 4 + 2,
-      speedX: (Math.random() - 0.5) * 0.5,
-      speedY: (Math.random() - 0.5) * 0.5,
-      opacity: Math.random() * 0.3 + 0.1,
+      speedX: (Math.random() - 0.5) * 0.3,
+      speedY: (Math.random() - 0.5) * 0.3,
+      opacity: Math.random() * 0.2 + 0.1,
     }))
     setParticles(newParticles)
 
@@ -78,20 +78,6 @@ export function AnimatedBackground() {
           }}
         />
       ))}
-
-      {/* Geometric Shapes */}
-      <div
-        className="border-primary/10 absolute top-1/4 left-1/4 h-32 w-32 rotate-45 animate-spin border"
-        style={{ animationDuration: '20s' }}
-      />
-      <div
-        className="border-accent/10 absolute right-1/4 bottom-1/4 h-24 w-24 rotate-12 animate-bounce border"
-        style={{ animationDuration: '6s' }}
-      />
-      <div
-        className="bg-primary/5 absolute top-1/2 right-1/3 h-16 w-16 animate-ping rounded-full"
-        style={{ animationDuration: '4s' }}
-      />
     </div>
   )
 }

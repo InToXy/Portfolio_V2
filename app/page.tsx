@@ -20,18 +20,15 @@ import {
   Calendar,
   Phone,
   MapPin,
-  Cloudy,
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { MouseFollower } from '@/components/mouse-follower'
-import { WeatherWidget } from '@/components/weather-widget'
 import { AnimatedBackground } from '@/components/animated-background'
-import { TypingAnimation } from '@/components/typing-animation'
 import { PhotoGallery } from '@/components/photo-gallery'
+import { RotatingTextAnimation } from '@/components/rotating-text-animation'
 
 export default function DevOpsPortfolio() {
   const [galleryOpen, setGalleryOpen] = useState(false)
-  const [showWeather, setShowWeather] = useState(true)
   const [selectedPassion, setSelectedPassion] = useState<{
     title: string
     photos: { src: string; alt: string }[]
@@ -81,40 +78,29 @@ export default function DevOpsPortfolio() {
       <MouseFollower />
       <div className="fixed top-4 right-4 z-50 flex gap-2">
         <ThemeToggle />
-        <Button variant="outline" size="icon" onClick={() => setShowWeather(!showWeather)}>
-          <Cloudy className="h-[1.2rem] w-[1.2rem]" />
-        </Button>
       </div>
-      {/* Weather Widget */}
-      {showWeather && <WeatherWidget />}
 
       {/* Hero Section */}
-      <section className="from-card to-background animate-in fade-in relative z-10 bg-gradient-to-br px-4 py-20 text-center duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 text-center duration-500">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-8">
-            {/* Animated Profile Image */}
-            <Image
-              src="/Portfolio_V2/profile-5.png"
-              alt="Mathéo Pinget - Photo professionnelle"
-              width={128} // Placeholder: please adjust if actual image dimensions are different
-              height={128} // Placeholder: please adjust if actual image dimensions are different
-              className="border-primary/10 animate-in zoom-in mx-auto mb-6 h-32 w-32 cursor-pointer rounded-full border-4 transition-transform delay-300 duration-1000 hover:scale-110"
-            />
-          </div>
-          <h1 className="font-heading text-primary animate-in slide-in-from-bottom-8 mb-6 text-4xl font-black text-balance delay-500 duration-1000 md:text-6xl">
-            <TypingAnimation
-              text="Je suis Mathéo Pinget, Ingénieur DevOps Cloud"
-              className="inline-block"
-              speed={80}
-            />
+          <h1 className="font-heading text-primary animate-in fade-in mb-2 text-4xl font-black text-balance duration-500 md:text-6xl">
+            Je suis Mathéo Pinget
           </h1>
           {/* Animated Description */}
-          <p className="text-muted-foreground animate-in slide-in-from-bottom-8 mx-auto mb-8 max-w-2xl text-xl text-pretty delay-700 duration-1000 md:text-2xl">
+          <p className="text-muted-foreground animate-in fade-in mx-auto mb-2 max-w-2xl text-3xl font-bold text-pretty duration-500">
+            <RotatingTextAnimation
+              words={['Ingénieur DevOps Cloud', 'Randonneur', 'Motard', 'Voyageur']}
+            />
+          </p>
+          <p
+            className="text-muted-foreground animate-in fade-in mx-auto mb-8 max-w-2xl text-xl text-pretty duration-500"
+            style={{ animationDelay: '200ms' }}
+          >
             Je construis des solutions performantes et sécurisées avec Terraform, Ansible, Docker et
             GitLab CI.
           </p>
           {/* Animated Buttons */}
-          <div className="animate-in slide-in-from-bottom-8 flex flex-wrap justify-center gap-4 delay-900 duration-1000">
+          <div className="animate-in fade-in flex flex-wrap justify-center gap-4 duration-500">
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 transition-all duration-300 hover:scale-105"
@@ -179,7 +165,7 @@ export default function DevOpsPortfolio() {
             </Button>
           </div>
           {/* Animated Contact Information */}
-          <div className="text-muted-foreground animate-in fade-in mt-8 flex flex-wrap justify-center gap-6 text-sm delay-1100 duration-1000">
+          <div className="text-muted-foreground animate-in fade-in mt-8 flex flex-wrap justify-center gap-6 text-sm duration-500">
             <div className="hover:text-primary flex cursor-pointer items-center gap-2 transition-colors">
               <Phone className="h-4 w-4" />
               06.40.24.07.08
@@ -193,14 +179,14 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* About Section */}
-      <section className="bg-card/30 animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-200 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-4xl text-center">
           {/* Animated Section Title */}
-          <h2 className="font-heading text-primary animate-in slide-in-from-left-8 mb-8 text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-8 text-3xl font-bold duration-500 md:text-4xl">
             À Propos
           </h2>
           {/* Animated Paragraph */}
-          <p className="text-muted-foreground animate-in slide-in-from-right-8 mx-auto max-w-3xl text-lg leading-relaxed text-pretty delay-300 duration-1000">
+          <p className="text-muted-foreground animate-in fade-in mx-auto max-w-3xl text-lg leading-relaxed text-pretty duration-500">
             Ingénieur DevOps en alternance, spécialisé en automatisation d&apos;infrastructures et
             CI/CD. Maîtrise de Terraform, Ansible, Docker, GitLab CI. Expérience en réseaux,
             cybersécurité et supervision (Prometheus, Grafana, Zabbix). Motivé et rigoureux, je
@@ -210,9 +196,9 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* Skills Section */}
-      <section className="animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-300 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-primary animate-in zoom-in mb-12 text-center text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-12 text-center text-3xl font-bold duration-500 md:text-4xl">
             Compétences Techniques
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -279,8 +265,7 @@ export default function DevOpsPortfolio() {
             ].map((category, index) => (
               <Card
                 key={index}
-                className="animate-in fade-in-50 group transition-all duration-300 duration-700 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
-                style={{ animationDelay: `${400 + index * 100}ms` }}
+                className="animate-in fade-in group transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
               >
                 <CardHeader>
                   <div className="flex items-center gap-3">
@@ -313,13 +298,30 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* Projects Section */}
-      <section className="bg-card/50 animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-500 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-primary animate-in zoom-in mb-12 text-center text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-12 text-center text-3xl font-bold duration-500 md:text-4xl">
             Projets & Réalisations
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {[
+              {
+                title: "JACK.CREATIVE.LAB - Création d'entreprise",
+                description:
+                  "Création d'une micro-entreprise spécialisée dans la refonte de sites web pour les PME. L'objectif est de transformer la présence numérique des entreprises avec des designs modernes, élégants et performants. Le site vitrine a été développé pour présenter les services, les projets et attirer des clients.",
+                tech: [
+                  'React',
+                  'Next.js',
+                  'TypeScript',
+                  'Tailwind CSS',
+                  'CI/CD',
+                  'GitHub Pages',
+                  'SEO',
+                  'GDPR',
+                ],
+                image: '/Portfolio_V2/jack_bg.png',
+                link: '/projects/jack-creative-lab',
+              },
               {
                 title: 'Serveur Multimédia Personnel',
                 description:
@@ -428,9 +430,9 @@ export default function DevOpsPortfolio() {
                 link: '/projects/route-optimization',
               },
               {
-                title: 'Création d&apos;une infrastructure Cloud avec OpenStack',
+                title: "Création d'une infrastructure Cloud avec OpenStack",
                 description:
-                  "Construction d&apos;un réseau informatique pour une petite structure à l'aide d'OpenStack. Le projet impliquait la mise en place de serveurs virtuels (CentOS, Windows 10), la configuration d&apos;un réseau privé, la gestion des adresses IP et la configuration des routages pour assurer la communication entre les machines.",
+                  "Construction d'un réseau informatique pour une petite structure à l'aide d'OpenStack. Le projet impliquait la mise en place de serveurs virtuels (CentOS, Windows 10), la configuration d'un réseau privé, la gestion des adresses IP et la configuration des routages pour assurer la communication entre les machines.",
                 tech: [
                   'OpenStack',
                   'CentOS 8',
@@ -484,8 +486,7 @@ export default function DevOpsPortfolio() {
             ].map((project, index) => (
               <Card
                 key={index}
-                className="group animate-in fade-in-50 cursor-pointer transition-all duration-500 duration-700 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-xl"
-                style={{ animationDelay: `${600 + index * 150}ms` }}
+                className="group animate-in fade-in cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:rotate-1 hover:shadow-xl"
               >
                 <div className="bg-muted relative aspect-video overflow-hidden rounded-t-lg">
                   {/* Animated Project Images */}
@@ -536,9 +537,9 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* Experience Section */}
-      <section className="animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-700 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-4xl">
-          <h2 className="font-heading text-primary animate-in zoom-in mb-12 text-center text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-12 text-center text-3xl font-bold duration-500 md:text-4xl">
             Expérience Professionnelle
           </h2>
           <div className="space-y-8">
@@ -567,8 +568,7 @@ export default function DevOpsPortfolio() {
             ].map((exp, index) => (
               <Card
                 key={index}
-                className="animate-in slide-in-from-left-8 transition-all duration-300 duration-1000 hover:scale-105 hover:shadow-lg"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className="animate-in fade-in transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <CardHeader>
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
@@ -606,9 +606,9 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* Education Section */}
-      <section className="bg-card/30 animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-800 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-4xl">
-          <h2 className="font-heading text-primary animate-in zoom-in mb-12 text-center text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-12 text-center text-3xl font-bold duration-500 md:text-4xl">
             Formation
           </h2>
           <div className="space-y-6">
@@ -631,8 +631,7 @@ export default function DevOpsPortfolio() {
             ].map((edu, index) => (
               <Card
                 key={index}
-                className="animate-in slide-in-from-right-8 transition-all duration-300 duration-1000 hover:scale-105 hover:shadow-lg"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className="animate-in fade-in transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <CardHeader>
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
@@ -657,9 +656,9 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* Passions Section */}
-      <section className="animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-850 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-primary animate-in zoom-in mb-12 text-center text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-12 text-center text-3xl font-bold duration-500 md:text-4xl">
             Passions & Loisirs
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -694,8 +693,7 @@ export default function DevOpsPortfolio() {
             ].map((passion, index) => (
               <Card
                 key={index}
-                className="group animate-in fade-in-50 cursor-pointer transition-all duration-500 duration-700 hover:-translate-y-2 hover:scale-105 hover:shadow-xl"
-                style={{ animationDelay: `${600 + index * 100}ms` }}
+                className="group animate-in fade-in cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-xl"
                 onClick={() => openGallery(passion.type, passion.title)}
               >
                 <div className="bg-muted relative aspect-video overflow-hidden rounded-t-lg">
@@ -725,16 +723,16 @@ export default function DevOpsPortfolio() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-primary text-primary-foreground animate-in slide-in-from-bottom-8 relative z-10 px-4 py-20 delay-900 duration-1000">
+      <section className="animate-in fade-in relative z-10 px-4 py-20 duration-500">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-heading animate-in zoom-in mb-6 text-3xl font-bold duration-1000 md:text-4xl">
+          <h2 className="font-heading text-primary animate-in fade-in mb-6 text-3xl font-bold duration-500 md:text-4xl">
             Prêt à Collaborer ?
           </h2>
-          <p className="text-primary-foreground/80 animate-in slide-in-from-bottom-4 mx-auto mb-8 max-w-2xl text-xl text-pretty delay-300 duration-1000">
+          <p className="text-muted-foreground animate-in fade-in mx-auto mb-8 max-w-2xl text-xl text-pretty duration-500">
             Je suis toujours intéressé par de nouveaux défis techniques et des opportunités de
             collaboration. Discutons de votre prochain projet !
           </p>
-          <div className="animate-in slide-in-from-bottom-4 flex flex-col justify-center gap-4 delay-500 duration-1000 sm:flex-row">
+          <div className="animate-in fade-in flex flex-col justify-center gap-4 duration-500 sm:flex-row">
             <Button size="lg" variant="secondary" asChild>
               <a href="mailto:matheo.pinget@gmail.com">
                 <Mail className="mr-2 h-4 w-4" />
@@ -744,7 +742,7 @@ export default function DevOpsPortfolio() {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent transition-all duration-300 hover:scale-105"
+              className="bg-transparent transition-all duration-300 hover:scale-105"
               asChild
             >
               <a
@@ -770,7 +768,7 @@ export default function DevOpsPortfolio() {
       )}
 
       {/* Footer */}
-      <footer className="bg-card animate-in fade-in relative z-10 border-t px-4 py-8 delay-1000 duration-1000">
+      <footer className="bg-card animate-in fade-in relative z-10 border-t px-4 py-8 duration-500">
         <div className="mx-auto max-w-6xl text-center">
           <p className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
             © 2024 Mathéo Pinget - Portfolio DevOps. Conçu avec passion pour l&apos;excellence

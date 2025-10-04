@@ -17,7 +17,6 @@ export function WeatherWidget() {
   const [currentTime, setCurrentTime] = useState(new Date())
   const [weather, setWeather] = useState<WeatherData | null>(null)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -208,7 +207,7 @@ export function WeatherWidget() {
               </div>
             </div>
 
-            {error && <div className="text-center text-xs text-yellow-600">{error}</div>}
+            
           </div>
         ) : (
           <div className="text-muted-foreground mt-2 text-center text-xs">Météo non disponible</div>
