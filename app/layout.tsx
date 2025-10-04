@@ -19,6 +19,7 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://intoxy.github.io/Portfolio_V2/'),
   title: 'Mathéo Pinget - Portfolio Ingénieur DevOps & Cloud',
   description:
     'Portfolio de Mathéo Pinget, Ingénieur DevOps & Cloud spécialisé en automatisation (Terraform, Ansible, Docker) et CI/CD. Découvrez mes projets et mon parcours.',
