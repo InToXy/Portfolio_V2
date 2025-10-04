@@ -21,7 +21,8 @@ export default function JackCreativeLabProject() {
             JACK.CREATIVE.LAB - Création d&apos;entreprise
           </h1>
           <p className="text-muted-foreground text-xl">
-            Création d&apos;une micro-entreprise spécialisée dans la refonte de sites web pour les PME.
+            Création d&apos;une micro-entreprise spécialisée dans la refonte de sites web pour les
+            PME.
           </p>
         </div>
 
@@ -71,10 +72,10 @@ export default function JackCreativeLabProject() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
-              Création d&apos;une micro-entreprise spécialisée dans la refonte de sites web pour les PME.
-              L&apos;objectif est de transformer la présence numérique des entreprises avec des designs
-              modernes, élégants et performants. Le site vitrine a été développé pour présenter les
-              services, les projets et attirer des clients.
+              Création d&apos;une micro-entreprise spécialisée dans la refonte de sites web pour les
+              PME. L&apos;objectif est de transformer la présence numérique des entreprises avec des
+              designs modernes, élégants et performants. Le site vitrine a été développé pour
+              présenter les services, les projets et attirer des clients.
             </p>
           </CardContent>
         </Card>

@@ -206,8 +206,6 @@ export function WeatherWidget() {
                 <span>{weather.visibility} km</span>
               </div>
             </div>
-
-            
           </div>
         ) : (
           <div className="text-muted-foreground mt-2 text-center text-xs">Météo non disponible</div>
