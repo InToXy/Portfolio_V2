@@ -21,7 +21,8 @@ export default function BigDataProject() {
             Plateforme Big Data pour le Secteur de la Santé
           </h1>
           <p className="text-muted-foreground text-xl">
-            Construction d&apos;un data warehouse pour un groupe hospitalier afin d&apos;analyser et visualiser les données médicales.
+            Construction d&apos;un data warehouse pour un groupe hospitalier afin d&apos;analyser et
+            visualiser les données médicales.
           </p>
         </div>
 
@@ -72,10 +73,16 @@ export default function BigDataProject() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
-              Le projet visait à mettre en place une plateforme Big Data complète pour un groupe hospitalier (CHU) afin de créer un data warehouse. L&apos;objectif était d&apos;intégrer, stocker, analyser et visualiser des données hétérogènes, telles que les dossiers médicaux et les flux de patients, pour en extraire des informations stratégiques.
+              Le projet visait à mettre en place une plateforme Big Data complète pour un groupe
+              hospitalier (CHU) afin de créer un data warehouse. L&apos;objectif était
+              d&apos;intégrer, stocker, analyser et visualiser des données hétérogènes, telles que
+              les dossiers médicaux et les flux de patients, pour en extraire des informations
+              stratégiques.
             </p>
             <p>
-              L&apos;architecture Data Lakehouse a été choisie pour traiter les données à travers différentes couches de qualité : Bronze (données brutes), Silver (nettoyées) et Gold (agrégées), prêtes pour la business intelligence.
+              L&apos;architecture Data Lakehouse a été choisie pour traiter les données à travers
+              différentes couches de qualité : Bronze (données brutes), Silver (nettoyées) et Gold
+              (agrégées), prêtes pour la business intelligence.
             </p>
           </CardContent>
         </Card>
@@ -119,11 +126,7 @@ export default function BigDataProject() {
         {/* Actions */}
         <div className="animate-in slide-in-from-bottom-4 flex gap-4 delay-800 duration-700">
           <Button asChild>
-            <a
-              href="https://github.com/InToXy/BigData"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/InToXy/BigData" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" />
               Voir sur GitHub
             </a>

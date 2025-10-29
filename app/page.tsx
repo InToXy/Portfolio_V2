@@ -307,8 +307,18 @@ export default function DevOpsPortfolio() {
             {[
               {
                 title: 'Plateforme Big Data pour la Santé',
-                description: "Construction d'un data warehouse pour un groupe hospitalier afin d'analyser et visualiser les données médicales. Architecture Data Lakehouse avec Spark et Airflow.",
-                tech: ['Apache Airflow', 'Apache Spark', 'MinIO', 'Hive', 'Trino', 'Superset', 'Docker', 'Python'],
+                description:
+                  "Construction d'un data warehouse pour un groupe hospitalier afin d'analyser et visualiser les données médicales. Architecture Data Lakehouse avec Spark et Airflow.",
+                tech: [
+                  'Apache Airflow',
+                  'Apache Spark',
+                  'MinIO',
+                  'Hive',
+                  'Trino',
+                  'Superset',
+                  'Docker',
+                  'Python',
+                ],
                 image: '/Portfolio_V2/big_data.jpg',
                 link: '/projects/big-data',
               },
