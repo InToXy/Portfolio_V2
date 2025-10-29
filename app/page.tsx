@@ -306,6 +306,13 @@ export default function DevOpsPortfolio() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {[
               {
+                title: 'Plateforme Big Data pour la Santé',
+                description: "Construction d'un data warehouse pour un groupe hospitalier afin d'analyser et visualiser les données médicales. Architecture Data Lakehouse avec Spark et Airflow.",
+                tech: ['Apache Airflow', 'Apache Spark', 'MinIO', 'Hive', 'Trino', 'Superset', 'Docker', 'Python'],
+                image: '/Portfolio_V2/big_data.jpg',
+                link: '/projects/big-data',
+              },
+              {
                 title: "JACK.CREATIVE.LAB - Création d'entreprise",
                 description:
                   "Création d'une micro-entreprise spécialisée dans la refonte de sites web pour les PME. L'objectif est de transformer la présence numérique des entreprises avec des designs modernes, élégants et performants. Le site vitrine a été développé pour présenter les services, les projets et attirer des clients.",
