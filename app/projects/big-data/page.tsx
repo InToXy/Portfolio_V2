@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Github, Database, BarChart, Layers } from 'lucide-react'
+import { ArrowLeft, Github, Database, BarChart, Layers, Download } from 'lucide-react'
 
 export default function BigDataProject() {
   return (
@@ -120,6 +120,27 @@ export default function BigDataProject() {
                 </ul>
               </div>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Livrables */}
+        <Card className="animate-in slide-in-from-bottom-4 mb-8 delay-600 duration-700">
+          <CardHeader>
+            <CardTitle>Livrables du Projet</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-4 sm:flex-row">
+            <Button asChild>
+              <a href="/Portfolio_V2/documents/Bigdata_Livrable1.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                Télécharger le Livrable 1
+              </a>
+            </Button>
+            <Button asChild>
+              <a href="/Portfolio_V2/documents/Bigdata_Livrable2.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                Télécharger le Livrable 2
+              </a>
+            </Button>
           </CardContent>
         </Card>
 
