@@ -2,7 +2,7 @@ name: Snyk Auto Merge
 
 on:
   pull_request:
-    types: 
+    types:
       - opened
       - reopened
       - synchronize
